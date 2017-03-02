@@ -16,6 +16,7 @@ RUN apt-get -y update && apt-get -y install --no-install-recommends \
  vsftpd \
  openssh-server \
  supervisor \
+ sudo \
  && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --upgrade pip
