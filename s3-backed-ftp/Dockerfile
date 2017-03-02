@@ -12,11 +12,14 @@ RUN apt-get -y update && apt-get -y install --no-install-recommends \
  make \
  pkg-config \
  python3-pip \
+ python3-setuptools \
  vsftpd \
  openssh-server \
  supervisor \
+ sudo \
  && rm -rf /var/lib/apt/lists/*
- 
+
+RUN pip3 install --upgrade pip
 RUN pip3 install awscli
 
 RUN git clone https://github.com/s3fs-fuse/s3fs-fuse.git && \
